@@ -9,6 +9,7 @@ pub type EscrowDatum {
   amount: Int,
 }
 
+// Redeemer indicating whether to release funds to the teacher or cancel the escrow
 pub type EscrowRedeemer {
   Release
   Cancel
