@@ -12,91 +12,212 @@
   },
   "validators": [
     {
-      "title": "minting_validator.my_first_mint.mint",
-      "redeemer": {
-        "title": "_redeemer",
-        "schema": {
-          "$ref": "#/definitions/Data"
-        }
-      },
-      "compiledCode": "585401010029800aba2aba1aab9eaab9dab9a4888896600264653001300600198031803800cc0180092225980099b8748000c01cdd500144c9289bae30093008375400516401830060013003375400d149a26cac8009",
-      "hash": "def68337867cb4f1f95b6b811fedbfcdd7780d10a95cc072077088ea"
-    },
-    {
-      "title": "minting_validator.my_first_mint.else",
-      "redeemer": {
-        "schema": {}
-      },
-      "compiledCode": "585401010029800aba2aba1aab9eaab9dab9a4888896600264653001300600198031803800cc0180092225980099b8748000c01cdd500144c9289bae30093008375400516401830060013003375400d149a26cac8009",
-      "hash": "def68337867cb4f1f95b6b811fedbfcdd7780d10a95cc072077088ea"
-    },
-    {
-      "title": "spending_validator.hello_world.spend",
+      "title": "escrow.escrow.spend",
       "datum": {
         "title": "datum",
         "schema": {
-          "$ref": "#/definitions/spending_validator~1Datum"
+          "$ref": "#/definitions/escrow~1EscrowDatum"
         }
       },
       "redeemer": {
         "title": "redeemer",
         "schema": {
-          "$ref": "#/definitions/spending_validator~1Redeemer"
+          "$ref": "#/definitions/escrow~1EscrowRedeemer"
         }
       },
-      "compiledCode": "59010601010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400060166ea800e2b30013371e6eb8c038c030dd5003a450d48656c6c6f2c20576f726c642100899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5180718061baa0038a5040291640291640346eb8c034004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
-      "hash": "2499e3a64ae4228a1e63ce6f131b279487d9780f132a0698e8b1f0f2"
+      "compiledCode": "59022701010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc8a60022b30013001300a375400513259800980118059baa0078acc004c966002600660186ea800626464660020026eb0c044c048c048c048c048c048c048c048c048c03cdd5004112cc00400629422b30013371e6eb8c04800400e2946266004004602600280710111bae300f300d375400314a08058c038c030dd5180718061baa00189919198008009bac3002300e375400e44b30010018a508acc004cc896600266ebcc04cc044dd5001180098089baa006899b89375a600a60226ea8018c8cc88cc008008004896600200300389919912cc004cdc8a441000028acc004cdc7a441000028800c01901544cc014014c0680110151bae3014001375a602a002602c00280a8c8c8cc004004dd59802180a1baa0052259800800c00e2646644b3001337229101000028acc004cdc7a441000028800c01901644cc014014c06c0110161bae30150013756602c002602e00280b052f5bded8c0290004528201e30110012301230130018a518998010011809000a01a40404601e6020602000314a08052294100a180698059baa0028b201298051baa0069806801a444b300130040028acc004c038dd5004c00e2c807a2b30013370e90010014566002601c6ea802600716403d1640308060601660180026e1d20003008375400516401830070013003375400f149a26cac80081",
+      "hash": "f20b14e9959ffa780d7530fe3b823c4202ad43afc1501c26807a9393"
     },
     {
-      "title": "spending_validator.hello_world.else",
+      "title": "escrow.escrow.else",
       "redeemer": {
         "schema": {}
       },
-      "compiledCode": "59010601010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400060166ea800e2b30013371e6eb8c038c030dd5003a450d48656c6c6f2c20576f726c642100899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5180718061baa0038a5040291640291640346eb8c034004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
-      "hash": "2499e3a64ae4228a1e63ce6f131b279487d9780f132a0698e8b1f0f2"
+      "compiledCode": "59022701010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc8a60022b30013001300a375400513259800980118059baa0078acc004c966002600660186ea800626464660020026eb0c044c048c048c048c048c048c048c048c048c03cdd5004112cc00400629422b30013371e6eb8c04800400e2946266004004602600280710111bae300f300d375400314a08058c038c030dd5180718061baa00189919198008009bac3002300e375400e44b30010018a508acc004cc896600266ebcc04cc044dd5001180098089baa006899b89375a600a60226ea8018c8cc88cc008008004896600200300389919912cc004cdc8a441000028acc004cdc7a441000028800c01901544cc014014c0680110151bae3014001375a602a002602c00280a8c8c8cc004004dd59802180a1baa0052259800800c00e2646644b3001337229101000028acc004cdc7a441000028800c01901644cc014014c06c0110161bae30150013756602c002602e00280b052f5bded8c0290004528201e30110012301230130018a518998010011809000a01a40404601e6020602000314a08052294100a180698059baa0028b201298051baa0069806801a444b300130040028acc004c038dd5004c00e2c807a2b30013370e90010014566002601c6ea802600716403d1640308060601660180026e1d20003008375400516401830070013003375400f149a26cac80081",
+      "hash": "f20b14e9959ffa780d7530fe3b823c4202ad43afc1501c26807a9393"
     }
   ],
   "definitions": {
-    "ByteArray": {
-      "dataType": "bytes"
+    "Int": {
+      "dataType": "integer"
     },
-    "Data": {
-      "title": "Data",
-      "description": "Any Plutus data."
+    "Option$cardano/address/StakeCredential": {
+      "title": "Option",
+      "anyOf": [
+        {
+          "title": "Some",
+          "description": "An optional value.",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/cardano~1address~1StakeCredential"
+            }
+          ]
+        },
+        {
+          "title": "None",
+          "description": "Nothing.",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "aiken/crypto/ScriptHash": {
+      "title": "ScriptHash",
+      "dataType": "bytes"
     },
     "aiken/crypto/VerificationKeyHash": {
       "title": "VerificationKeyHash",
       "dataType": "bytes"
     },
-    "spending_validator/Datum": {
-      "title": "Datum",
+    "cardano/address/Address": {
+      "title": "Address",
+      "description": "A Cardano `Address` typically holding one or two credential references.\n\n Note that legacy bootstrap addresses (a.k.a. 'Byron addresses') are\n completely excluded from Plutus contexts. Thus, from an on-chain\n perspective only exists addresses of type 00, 01, ..., 07 as detailed\n in [CIP-0019 :: Shelley Addresses](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019/#shelley-addresses).",
       "anyOf": [
         {
-          "title": "Datum",
+          "title": "Address",
           "dataType": "constructor",
           "index": 0,
           "fields": [
             {
-              "title": "owner",
-              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+              "title": "payment_credential",
+              "$ref": "#/definitions/cardano~1address~1PaymentCredential"
+            },
+            {
+              "title": "stake_credential",
+              "$ref": "#/definitions/Option$cardano~1address~1StakeCredential"
             }
           ]
         }
       ]
     },
-    "spending_validator/Redeemer": {
-      "title": "Redeemer",
+    "cardano/address/Credential": {
+      "title": "Credential",
+      "description": "A general structure for representing an on-chain `Credential`.\n\n Credentials are always one of two kinds: a direct public/private key\n pair, or a script (native or Plutus).",
       "anyOf": [
         {
-          "title": "Redeemer",
+          "title": "VerificationKey",
           "dataType": "constructor",
           "index": 0,
           "fields": [
             {
-              "title": "msg",
-              "$ref": "#/definitions/ByteArray"
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
             }
           ]
+        },
+        {
+          "title": "Script",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "$ref": "#/definitions/aiken~1crypto~1ScriptHash"
+            }
+          ]
+        }
+      ]
+    },
+    "cardano/address/PaymentCredential": {
+      "title": "PaymentCredential",
+      "description": "A general structure for representing an on-chain `Credential`.\n\n Credentials are always one of two kinds: a direct public/private key\n pair, or a script (native or Plutus).",
+      "anyOf": [
+        {
+          "title": "VerificationKey",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        },
+        {
+          "title": "Script",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "$ref": "#/definitions/aiken~1crypto~1ScriptHash"
+            }
+          ]
+        }
+      ]
+    },
+    "cardano/address/StakeCredential": {
+      "title": "StakeCredential",
+      "description": "Represent a type of object that can be represented either inline (by hash)\n or via a reference (i.e. a pointer to an on-chain location).\n\n This is mainly use for capturing pointers to a stake credential\n registration certificate in the case of so-called pointer addresses.",
+      "anyOf": [
+        {
+          "title": "Inline",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/cardano~1address~1Credential"
+            }
+          ]
+        },
+        {
+          "title": "Pointer",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "slot_number",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "transaction_index",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "certificate_index",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "escrow/EscrowDatum": {
+      "title": "EscrowDatum",
+      "anyOf": [
+        {
+          "title": "EscrowDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "student",
+              "$ref": "#/definitions/cardano~1address~1Address"
+            },
+            {
+              "title": "teacher",
+              "$ref": "#/definitions/cardano~1address~1Address"
+            },
+            {
+              "title": "amount",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "escrow/EscrowRedeemer": {
+      "title": "EscrowRedeemer",
+      "anyOf": [
+        {
+          "title": "Release",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Cancel",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
         }
       ]
     }
